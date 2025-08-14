@@ -24,11 +24,10 @@ const validateUsername = (username, msg = {}, result = true) => {
     result = false;
     msg.username.push("Username cannot contain consecutive dots.");
   }
-
-  if (!/^[A-Za-z0-9_]{4,20}$/.test(username)) {
-    result = false;
-    msg.username.push("Username can only contain letters, numbers, and underscores (4–20 chars).");
-  }
+//   if (!/^[A-Za-z]{4,20}$/.test(username)) {
+//     result = false;
+//     msg.username.push("Username must be 4–20 letters only (A–Z or a–z).");
+//   }
 
   return [result, msg];
 };
